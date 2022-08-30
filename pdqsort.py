@@ -1,4 +1,3 @@
-from multiprocessing.heap import Heap
 from insertionsort import InsertionSort
 from heapsort import HeapSort
 
