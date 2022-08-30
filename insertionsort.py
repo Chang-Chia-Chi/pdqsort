@@ -2,7 +2,7 @@ import bisect
 
 class InsertionSort:
 
-  PARTIAL_INSERTION_SORT_LIMIt = 8
+  PARTIAL_INSERTION_SORT_LIMIT = 8
 
   @classmethod
   def sort(cls, left, right, array):
@@ -32,5 +32,5 @@ class InsertionSort:
         array[insert_idx] = tmp
         limit += i - insert_idx
 
-      if limit > InsertionSort.PARTIAL_INSERTION_SORT_LIMIt: return False
+      if limit > cls.PARTIAL_INSERTION_SORT_LIMIT: return False
     return True

@@ -27,6 +27,5 @@ class TestHeapSort(unittest.TestCase):
       expect = array[:left] + sorted(array[left:right+1]) + array[right+1:]
 
       HeapSort.sort(left, right, array)
-      
-      self.assertEqual(array, expect)
 
+      self.assertEqual(array, expect)

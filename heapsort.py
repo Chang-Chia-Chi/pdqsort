@@ -1,16 +1,17 @@
 class HeapSort:
+
   @classmethod
   def sort(cls, left, right, array):
-    HeapSort._heapify(left, right, array)
+    cls._heapify(left, right, array)
     for curr in range(right, left, -1):
       array[curr], array[left] = array[left], array[curr]
-      HeapSort._bubbleDown(left, left, curr-1, array)
+      cls._bubbleDown(left, left, curr-1, array)
 
   @classmethod
   def _heapify(cls, left, right, array):
     half = left + (right - left + 1) // 2
     for curr in range(half, left - 1, -1):
-      HeapSort._bubbleDown(left, curr, right, array)
+      cls._bubbleDown(left, curr, right, array)
 
   @classmethod
   def _bubbleDown(cls, left, curr, right, array):
